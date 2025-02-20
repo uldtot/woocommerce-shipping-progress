@@ -78,6 +78,7 @@ class WC_Free_Shipping_Progress {
             .shipping-progress-wrapper {
                 font-size: 16px;
                 margin-bottom: 10px;
+                 margin-bottom: 36px;
             }
             .progress-bar-container {
                 width: 100%;
