@@ -59,7 +59,17 @@ class WC_Free_Shipping_Progress {
         ob_start();
         ?>
         <div class="shipping-progress-wrapper">
-            <p>Du er <?php echo wc_price($remaining); ?> fra at opnå fri fragt!</p>
+        <?php
+                if($remaining == 0) {
+?>
+      <p>Du har opnået fri fragt!</p>
+            <?php
+                } else {
+        ?>
+        <p>Du er <?php echo wc_price($remaining); ?> fra at opnå fri fragt!</p>
+                    <?php
+                }
+                    ?>
             <div class="progress-bar-container">
                 <div class="progress-bar" style="width: <?php echo $progress; ?>%;"></div>
             </div>
